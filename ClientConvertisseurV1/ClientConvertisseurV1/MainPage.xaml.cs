@@ -22,9 +22,52 @@ namespace ClientConvertisseurV1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Service.WSService monService;
         public MainPage()
         {
+            monService = new Service.WSService();
+  
             this.InitializeComponent();
+            ActionGetData();
+        }
+        private async void ActionGetData()
+        {
+            try { List<Model.Devise> result = await monService.getAllDevisesAsync();
+                this.ComboBoxDevise.DataContext = result;
+                this.ComboBoxDevise.ItemsSource = result;
+                this.ComboBoxDevise.SelectedValuePath = "id";
+                this.ComboBoxDevise.DisplayMemberPath = "deviseName";
+            } 
+            catch (Exception e)
+            {
+                this.ErrorMessage.Content = ("Erreur WebService");
+                this.ErrorMessage.IsEnabled = true;
+
+            }
+
+        }
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void ConvertirButton_Click(object sender, RoutedEventArgs e)
+        {
+            double initialAm;
+            Model.Devise finaldevise;
+            double totalAmount;
+            try
+            {initialAm = Double.Parse(this.InitialAmount.Text);
+                finaldevise = (Model.Devise) this.ComboBoxDevise.SelectedItem;
+                totalAmount = initialAm * finaldevise.taux;
+                this.AmountDeviseValue.Text = totalAmount.ToString();
+            }
+            catch (Exception f)
+            {
+                this.ErrorMessage.Content = ("Erreur récupération des données initiales");
+                this.ErrorMessage.IsEnabled = true;
+
+            }
         }
     }
 }

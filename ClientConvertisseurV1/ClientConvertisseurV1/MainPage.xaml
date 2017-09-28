@@ -8,6 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Frame x:Name="FrameTitle" Content="Convertisseur" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Navigated="Frame_Navigated" FontWeight="Bold" FontSize="24"/>
+        <Frame Content="Montant en Euros" Height="38" Margin="0,106,10,0" VerticalAlignment="Top" Navigated="Frame_Navigated" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Frame Content="Devise" Height="38" Margin="0,220,10,0" VerticalAlignment="Top" Navigated="Frame_Navigated" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Frame Content="Montant en devises" Height="38" Margin="10,478,10,0" VerticalAlignment="Top" Navigated="Frame_Navigated" FontSize="20" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="InitialAmount" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="64,149,64,0" InputScope="Digits"/>
+        <TextBox x:Name="AmountDeviseValue" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="64,521,64,0" IsReadOnly="True"/>
+        <Button x:Name="ConvertirButton" Content="Convertir" HorizontalAlignment="Stretch" Margin="64,360,64,0" VerticalAlignment="Top" Height="47" FontWeight="Bold" FontSize="24" Click="ConvertirButton_Click"/>
+        <ComboBox x:Name="ComboBoxDevise" HorizontalAlignment="Stretch" Margin="64,263,64,0" VerticalAlignment="Top"/>
+        <Frame x:Name="ErrorMessage" Content="" VerticalAlignment="Top" Margin="64,431,64,0" IsEnabled="False" FontSize="20" FontWeight="Bold" Foreground="#FFF71C1C"/>
     </Grid>
 </Page>
