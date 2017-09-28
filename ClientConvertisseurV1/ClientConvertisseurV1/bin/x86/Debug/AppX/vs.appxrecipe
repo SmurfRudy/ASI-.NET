@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f4eb1a71-3527-4cf0-a2a1-776e69ee2390</PackageIdentityName>
     <PackageIdentityPublisher>CN=Maxime</PackageIdentityPublisher>
-    <IntermediateOutputPath>c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>709AD8FCEEEF6A39F4498EA108B49DE5DCB127DE2590D54820DC0AD28F4B4399</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f4eb1a71-3527-4cf0-a2a1-776e69ee2390_1.0.0.0_x86__b7ycwg95kd4wt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f4eb1a71-3527-4cf0-a2a1-776e69ee2390_b7ycwg95kd4wt!App</RegisteredUserModeAppID>
@@ -28,20 +28,32 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-27T23:37:28.545</Modified>
+      <Modified>2017-09-28T14:05:30.634</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\ClientConvertisseurV1.exe">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\ClientConvertisseurV1.exe">
       <PackagePath>entrypoint\ClientConvertisseurV1.exe</PackagePath>
-      <Modified>2017-09-27T23:37:27.802</Modified>
+      <Modified>2017-09-28T14:05:29.872</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
+      <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
+      <Modified>2015-01-28T03:02:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2016-06-11T21:13:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.Net.Http\2.2.22\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-04-29T12:51:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.Net.Http\2.2.22\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-04-29T12:51:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.NETCore.Portable.Compatibility\1.0.2\lib\netcore50\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
@@ -94,6 +106,10 @@
     <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Microsoft.VisualBasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
       <Modified>2016-06-11T21:13:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\Newtonsoft.Json\6.0.4\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-08-03T18:33:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\runtime.any.System.Collections\4.0.11\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
@@ -495,60 +511,60 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2017-09-27T22:47:34.643</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-26T08:34:53.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\ClientConvertisseurV1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\ClientConvertisseurV1.xr.xml">
       <PackagePath>ClientConvertisseurV1.xr.xml</PackagePath>
-      <Modified>2017-09-27T23:37:27.503</Modified>
+      <Modified>2017-09-28T13:30:58.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-26T09:47:54.267</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-27T23:37:28.331</Modified>
+      <Modified>2017-09-28T13:30:59.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\maxime\source\repos\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Core\ClientConvertisseurV1.exe">
+    <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Core\ClientConvertisseurV1.exe">
       <PackagePath>ClientConvertisseurV1.exe</PackagePath>
-      <Modified>2017-09-27T23:37:28.533</Modified>
+      <Modified>2017-09-28T14:05:30.620</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

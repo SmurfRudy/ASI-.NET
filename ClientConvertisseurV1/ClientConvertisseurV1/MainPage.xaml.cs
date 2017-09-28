@@ -22,9 +22,32 @@ namespace ClientConvertisseurV1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Service.WSService service;
         public MainPage()
         {
             this.InitializeComponent();
+            service = new Service.WSService();
+            ActionGetData();
+        }
+
+        private async void ActionGetData()
+        {
+            var result = await service.getAllDevisesAsync();
+            this.ComboBoxDevise.DataContext = new List<Model.Devise>(result);
+        }
+
+        private void Convert(object sender, RoutedEventArgs e)
+        {
+            var selectedDevise = this.ComboBoxDevise.SelectedItem;
+            if (selectedDevise != null)
+            {
+                Model.Devise devise = (Model.Devise)selectedDevise;
+                if (this.TextBoxEuros.Text != "")
+                {
+                    Double result = Double.Parse(this.TextBoxEuros.Text) * devise.taux;
+                    this.TextAmount.Text = result.ToString();
+                }
+            }
         }
     }
 }
