@@ -22601,10 +22601,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\documents\\visual studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
       "projectName": "ClientConvertisseurV1",
-      "projectPath": "C:\\Users\\Admin\\documents\\visual studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
-      "outputPath": "C:\\Users\\Admin\\documents\\visual studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
+      "outputPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV1\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
