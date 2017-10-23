@@ -12,10 +12,11 @@ namespace ClientConvertisseurV2.ViewModel
     /// This class contains static references to all the view models in the
     /// application and provides an entry point for the bindings.
     /// <para>
-    /// See http://www.mvvmlight.net
+    /// /// See http://www.mvvmlight.net
     /// </para>
     /// </summary>
-    class ViewModelLocator
+    /// 
+    public class ViewModelLocator
     {
         static ViewModelLocator()
         {

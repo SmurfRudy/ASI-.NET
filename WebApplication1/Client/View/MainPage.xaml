@@ -40,10 +40,5 @@
                 </StackPanel>
             </StackPanel>
         </SplitView.Pane>
-        <SplitView.Content>
-            <Page Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                <Image Source="http://www.business-actor.com/wpcontent/uploads/2013/07/logo-allocine.png"></Image>
-            </Page>
-        </SplitView.Content>
     </SplitView>
 </Page>

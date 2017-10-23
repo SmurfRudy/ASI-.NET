@@ -86,8 +86,7 @@ namespace ClientConvertisseurV2.ViewModel
                     }
                     else
                     {
-                        Double result = Double.Parse(MontantResultat) / ComboBoxDeviseItem.taux;
-                        MontantEuros = result.ToString();
+                        MontantEuros = (Double.Parse(this.MontantResultat) / this.ComboBoxDeviseItem.taux).ToString();
                     }
                 }
             }

@@ -188,6 +188,7 @@ namespace Client.Client_XamlTypeInfo
         private object Activate_0_ViewModelLocator() { return new global::Client.ViewModel.ViewModelLocator(); }
         private object Activate_2_MainViewModel() { return new global::Client.ViewModel.MainViewModel(); }
         private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
+        private object Activate_5_MainPage() { return new global::Client.View.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -231,6 +232,7 @@ namespace Client.Client_XamlTypeInfo
 
             case 5:   //  Client.View.MainPage
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

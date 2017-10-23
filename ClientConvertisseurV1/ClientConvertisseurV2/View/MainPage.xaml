@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     DataContext="{Binding Main, Source={StaticResource Locator}}">
 
+<<<<<<< HEAD
     <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="180">
         <SplitView.Pane>
             <StackPanel Background="Gray">
@@ -26,4 +27,17 @@
             </StackPanel>
         </SplitView.Pane>
     </SplitView>
+=======
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Frame x:Name="FrameTitle" Content="Convertisseur : Euro -> Devise" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" VerticalAlignment="Top" Width="350"  FontWeight="Bold" FontSize="24"/>
+        <Frame Content="Montant en Euros" Height="38" Margin="0,106,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center" />
+        <Frame Content="Devise" Height="38" Margin="0,220,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center"/>
+        <Frame Content="Montant en devises" Height="38" Margin="10,478,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="InitialAmount" TextWrapping="Wrap" VerticalAlignment="Top" Margin="64,149,64,0" InputScope="Digits" Text="{Binding MontantEuros, Mode=TwoWay}"/>
+        <TextBox x:Name="AmountDeviseValue" TextWrapping="Wrap" VerticalAlignment="Top" Margin="64,521,64,0" IsReadOnly="True"  Text="{Binding FinalAmount, Mode=OneWay}"/>
+        <Button x:Name="ConvertirButton" Content="Convertir" HorizontalAlignment="Stretch" Margin="64,360,64,0" VerticalAlignment="Top" Height="47" FontWeight="Bold" FontSize="24" Command="{Binding BtnSetConversion}"/>
+        <ComboBox x:Name="ComboBoxDevise" HorizontalAlignment="Stretch" Margin="64,263,64,0" VerticalAlignment="Top" ItemsSource="{Binding ComboBoxDevises}" SelectedValuePath="id" DisplayMemberPath="deviseName" SelectedItem="{Binding ComboBoxDeviseItem,Mode=TwoWay}"/>
+        <Frame x:Name="ErrorMessage"  VerticalAlignment="Top" Margin="64,431,64,0" IsEnabled="False" FontSize="20" FontWeight="Bold" Foreground="#FFF71C1C" Content="{Binding ErrorMessage,Mode=OneWay}"/>
+    </Grid>
+>>>>>>> 71c5c606c6b23313cac7c97fa318da2b4f4abc4d
 </Page>

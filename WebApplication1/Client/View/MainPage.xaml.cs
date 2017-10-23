@@ -22,7 +22,7 @@ namespace Client.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage(Frame frame)
+        public MainPage()
         {
             this.InitializeComponent();
         }

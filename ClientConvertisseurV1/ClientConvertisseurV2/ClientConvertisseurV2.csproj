@@ -96,6 +96,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service\ErrorDialog.cs" />
+    <Compile Include="Model\Devise.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\InvertedConvertViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -105,13 +107,11 @@
     <Compile Include="View\ConvertPage.xaml.cs">
       <DependentUpon>ConvertPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Devise.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\WSService.cs" />
     <Compile Include="ViewModel\ConvertViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
+	</Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

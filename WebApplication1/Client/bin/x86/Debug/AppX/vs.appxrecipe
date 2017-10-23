@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Maxime\source\repos\ASI-.NET\WebApplication1\Client\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-23T14:52:54.680</Modified>
+      <Modified>2017-10-23T15:09:38.091</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\WebApplication1\Client\bin\x86\Debug\Client.exe">
       <PackagePath>entrypoint\Client.exe</PackagePath>
-      <Modified>2017-10-23T14:52:54.071</Modified>
+      <Modified>2017-10-23T15:09:37.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxime\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -564,7 +564,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxime\source\repos\ASI-.NET\WebApplication1\Client\bin\x86\Debug\Core\Client.exe">
       <PackagePath>Client.exe</PackagePath>
-      <Modified>2017-10-23T14:52:54.672</Modified>
+      <Modified>2017-10-23T15:09:38.081</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

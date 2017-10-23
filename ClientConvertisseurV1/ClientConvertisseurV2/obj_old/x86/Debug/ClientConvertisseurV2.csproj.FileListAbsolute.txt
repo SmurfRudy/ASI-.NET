@@ -1,0 +1,15 @@
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\App.g.i.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\App.g.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\InvertedConvertPage.g.i.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\InvertedConvertPage.g.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\ConvertPage.g.i.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\ConvertPage.g.cs
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\App.xaml
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\InvertedConvertPage.xaml
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\ConvertPage.xaml
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\MainPage.xaml
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\App.xbf
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\InvertedConvertPage.xbf
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\ConvertPage.xbf
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\MainPage.xbf
+C:\Users\Maxime\source\repos\ASI-.NET\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\ClientConvertisseurV2.csprojResolveAssemblyReference.cache
