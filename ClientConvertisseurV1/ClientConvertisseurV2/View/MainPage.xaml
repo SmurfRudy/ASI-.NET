@@ -8,36 +8,17 @@
     mc:Ignorable="d"
     DataContext="{Binding Main, Source={StaticResource Locator}}">
 
-<<<<<<< HEAD
-    <SplitView x:Name="MainSplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="180">
-        <SplitView.Pane>
-            <StackPanel Background="Gray">
-                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="BtnConverter" Content="&#8364;"
-                    Width="50" Height="50" Background="Transparent" Command="{Binding BtnConverter}"/>
-                    <TextBlock Text="Euro => Devise" FontSize="18" VerticalAlignment="Center"></TextBlock>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="BtnInvertedConverter" Content="&#36;"
-                    Width="50" Height="50" Background="Transparent" Command="{Binding BtnInvertedConverter}"/>
-                    <TextBlock Text="Devise => Euro" FontSize="18" VerticalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </StackPanel>
-        </SplitView.Pane>
-    </SplitView>
-=======
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Frame x:Name="FrameTitle" Content="Convertisseur : Euro -> Devise" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" VerticalAlignment="Top" Width="350"  FontWeight="Bold" FontSize="24"/>
-        <Frame Content="Montant en Euros" Height="38" Margin="0,106,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center" />
-        <Frame Content="Devise" Height="38" Margin="0,220,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center"/>
-        <Frame Content="Montant en devises" Height="38" Margin="10,478,10,0" VerticalAlignment="Top"  FontSize="20" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="InitialAmount" TextWrapping="Wrap" VerticalAlignment="Top" Margin="64,149,64,0" InputScope="Digits" Text="{Binding MontantEuros, Mode=TwoWay}"/>
-        <TextBox x:Name="AmountDeviseValue" TextWrapping="Wrap" VerticalAlignment="Top" Margin="64,521,64,0" IsReadOnly="True"  Text="{Binding FinalAmount, Mode=OneWay}"/>
-        <Button x:Name="ConvertirButton" Content="Convertir" HorizontalAlignment="Stretch" Margin="64,360,64,0" VerticalAlignment="Top" Height="47" FontWeight="Bold" FontSize="24" Command="{Binding BtnSetConversion}"/>
-        <ComboBox x:Name="ComboBoxDevise" HorizontalAlignment="Stretch" Margin="64,263,64,0" VerticalAlignment="Top" ItemsSource="{Binding ComboBoxDevises}" SelectedValuePath="id" DisplayMemberPath="deviseName" SelectedItem="{Binding ComboBoxDeviseItem,Mode=TwoWay}"/>
-        <Frame x:Name="ErrorMessage"  VerticalAlignment="Top" Margin="64,431,64,0" IsEnabled="False" FontSize="20" FontWeight="Bold" Foreground="#FFF71C1C" Content="{Binding ErrorMessage,Mode=OneWay}"/>
-    </Grid>
->>>>>>> 71c5c606c6b23313cac7c97fa318da2b4f4abc4d
+    <RelativePanel x:Name="MainPanel" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="Titre" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" Text="Convertisseur Euro => Devise" VerticalAlignment="Top" Width="auto" Foreground="#FFED0000" FontSize="34" Margin="0,0,0,10"/>
+        <TextBlock x:Name="LabelAmontEuros" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="Titre" Height="35" TextWrapping="Wrap" Text="Montant en Euros" Width="200" TextAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="TextBoxEuros" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="LabelAmontEuros" Height="40" TextWrapping="Wrap" Width="200" Margin="0,0,0,10" Text="{Binding MontantEuros, Mode=TwoWay}"/>
+
+        <TextBlock x:Name="LabelDevise" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="TextBoxEuros" Height="35" TextWrapping="Wrap" Text="Devise" Width="200" TextAlignment="Center"  FontSize="20"></TextBlock>
+        <ComboBox x:Name="ComboBoxDevise" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="LabelDevise" Height="40" Width="200" Margin="0,0,0,10" ItemsSource="{Binding ComboBoxDevises}" SelectedValuePath="id" DisplayMemberPath="name" SelectedItem="{Binding ComboBoxDeviseItem,Mode=TwoWay}"/>
+
+        <Button x:Name="ButtonConvert" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ComboBoxDevise" Height="40" Width="200" FontSize="20" Margin="0,0,0,30" Command="{Binding BtnSetConversion}">Convertir</Button>
+
+        <TextBlock x:Name="LabelAmount" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ButtonConvert" Height="35" TextWrapping="Wrap" Text="Montant en devises" Width="200" TextAlignment="Center"  FontSize="20" Margin="0,0,0,10"></TextBlock>
+        <TextBox x:Name="TextAmount" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="LabelAmount" Height="40" TextWrapping="Wrap" Width="200" IsReadOnly="True" Text="{Binding MontantResultat, Mode=OneWay}"/>
+    </RelativePanel>
 </Page>

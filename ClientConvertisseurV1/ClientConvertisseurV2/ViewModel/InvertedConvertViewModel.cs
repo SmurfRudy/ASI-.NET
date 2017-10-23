@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace ClientConvertisseurV2.ViewModel
 {
-    class InvertedConvertViewModel : ViewModelBase
+    public class InvertedConvertViewModel : ViewModelBase
     {
         private ObservableCollection<Model.Devise> _comboBoxDevises;
         public ObservableCollection<Model.Devise> ComboBoxDevises

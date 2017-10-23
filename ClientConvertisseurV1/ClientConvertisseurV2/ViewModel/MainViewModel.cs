@@ -2,38 +2,95 @@
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 
 namespace ClientConvertisseurV2.ViewModel
 {
-    class MainViewModel : ViewModelBase
-    { 
-        public ICommand BtnConverter { get; set; }
-        public ICommand BtnInvertedConverter { get; set; }
+    public class MainViewModel : ViewModelBase
+    {
+        private ObservableCollection<Model.Devise> _comboBoxDevises;
+        public ObservableCollection<Model.Devise> ComboBoxDevises
+        {
+            get { return _comboBoxDevises; }
+            set
+            {
+                _comboBoxDevises = value;
+                RaisePropertyChanged();// Pour notifier de la modification de ses données
+            }
+        }
+        private string _montantEuros;
+        public string MontantEuros
+        {
+            get { return _montantEuros; }
+            set
+            {
+                _montantEuros = value;
+                RaisePropertyChanged();
+            }
+        }
+        private Model.Devise _comboBoxDeviseItem;
+        public Model.Devise ComboBoxDeviseItem
+        {
+            get { return _comboBoxDeviseItem; }
+            set
+            {
+                _comboBoxDeviseItem = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _montantResultat;
+        public string MontantResultat
+        {
+            get { return _montantResultat; }
+            set
+            {
+                _montantResultat = value;
+                RaisePropertyChanged();
+            }
+        }
 
+        public ICommand BtnSetConversion { get; private set; }
+        Service.WSService service = Service.WSService.getInstance();
+        Service.ErrorDialog error = new Service.ErrorDialog();
         public MainViewModel()
         {
-            BtnConverter = new RelayCommand(goToConverter);
-            BtnInvertedConverter = new RelayCommand(goToInvertedConverter);
+            ActionGetData();
+            BtnSetConversion = new RelayCommand(ActionSetConversion);
         }
-
-        private void goToConverter()
+        private async void ActionGetData()
         {
-            View.MainPage r = (View.MainPage)Window.Current.Content;
-            SplitView sv = (SplitView)(r.Content);
-            (sv.Content as Frame).Navigate(typeof(View.ConvertPage));
+            var result = await service.getAllDevisesAsync();
+            ComboBoxDevises = new ObservableCollection<Model.Devise>(result);
         }
-
-        private void goToInvertedConverter()
+        private async void ActionSetConversion()
         {
-            View.MainPage r = (View.MainPage)Window.Current.Content;
-            SplitView sv = (SplitView)(r.Content);
-            (sv.Content as Frame).Navigate(typeof(View.InvertedConvertPage));
+            if (MontantEuros == null)
+            {
+                await error.showErrorAsync("Veuillez remplir le montant");
+            }
+            else
+            {
+                if (MontantEuros.Equals(""))
+                {
+                    await error.showErrorAsync("Veuillez remplir le montant");
+                }
+                else
+                {
+                    if (ComboBoxDeviseItem == null)
+                    {
+                        await error.showErrorAsync("Veuillez choisir une devise");
+                    }
+                    else
+                    {
+                        Double result = Double.Parse(MontantEuros) * ComboBoxDeviseItem.taux;
+                        MontantResultat = result.ToString();
+                    }
+                }
+            }
         }
     }
 }

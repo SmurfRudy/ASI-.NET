@@ -21,16 +21,16 @@ namespace ClientConvertisseurV2.ViewModel
         static ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            SimpleIoc.Default.Register<RootViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<ConvertViewModel>();
             SimpleIoc.Default.Register<InvertedConvertViewModel>();
         }
 
         /// <summary>
         /// Gets the Main property.
         /// </summary>
+        public RootViewModel Root { get => ServiceLocator.Current.GetInstance<RootViewModel>(); }
         public MainViewModel Main { get => ServiceLocator.Current.GetInstance<MainViewModel>(); }
-        public ConvertViewModel Convert { get => ServiceLocator.Current.GetInstance<ConvertViewModel>(); }
         public InvertedConvertViewModel InvertedConvert { get => ServiceLocator.Current.GetInstance<InvertedConvertViewModel>(); }
     }
 }
