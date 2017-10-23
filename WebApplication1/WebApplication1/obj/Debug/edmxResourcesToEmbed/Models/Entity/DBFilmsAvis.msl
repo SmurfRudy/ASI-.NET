@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FilmsAvisModelsEntityStoreContainer" CdmEntityContainer="BDFilmsAvisContext">
+    <EntitySetMapping Name="T_E_AVIS_AVI">
+      <EntityTypeMapping TypeName="FilmsAvisModels.Entity.T_E_AVIS_AVI">
+        <MappingFragment StoreEntitySet="T_E_AVIS_AVI">
+          <ScalarProperty Name="CPT_ID" ColumnName="CPT_ID" />
+          <ScalarProperty Name="FLM_ID" ColumnName="FLM_ID" />
+          <ScalarProperty Name="AVI_DATE" ColumnName="AVI_DATE" />
+          <ScalarProperty Name="AVI_TITRE" ColumnName="AVI_TITRE" />
+          <ScalarProperty Name="AVI_DETAIL" ColumnName="AVI_DETAIL" />
+          <ScalarProperty Name="AVI_NOTE" ColumnName="AVI_NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_E_COMPTE_CPT">
+      <EntityTypeMapping TypeName="FilmsAvisModels.Entity.T_E_COMPTE_CPT">
+        <MappingFragment StoreEntitySet="T_E_COMPTE_CPT">
+          <ScalarProperty Name="CPT_ID" ColumnName="CPT_ID" />
+          <ScalarProperty Name="CPT_NOM" ColumnName="CPT_NOM" />
+          <ScalarProperty Name="CPT_PRENOM" ColumnName="CPT_PRENOM" />
+          <ScalarProperty Name="CPT_TELPORTABLE" ColumnName="CPT_TELPORTABLE" />
+          <ScalarProperty Name="CPT_MEL" ColumnName="CPT_MEL" />
+          <ScalarProperty Name="CPT_PWD" ColumnName="CPT_PWD" />
+          <ScalarProperty Name="CPT_RUE" ColumnName="CPT_RUE" />
+          <ScalarProperty Name="CPT_CP" ColumnName="CPT_CP" />
+          <ScalarProperty Name="CPT_VILLE" ColumnName="CPT_VILLE" />
+          <ScalarProperty Name="CPT_PAYS" ColumnName="CPT_PAYS" />
+          <ScalarProperty Name="CPT_LATITUDE" ColumnName="CPT_LATITUDE" />
+          <ScalarProperty Name="CPT_LONGITUDE" ColumnName="CPT_LONGITUDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_E_FILM_FLM">
+      <EntityTypeMapping TypeName="FilmsAvisModels.Entity.T_E_FILM_FLM">
+        <MappingFragment StoreEntitySet="T_E_FILM_FLM">
+          <ScalarProperty Name="FLM_ID" ColumnName="FLM_ID" />
+          <ScalarProperty Name="FLM_TITRE" ColumnName="FLM_TITRE" />
+          <ScalarProperty Name="FLM_SYNOPSIS" ColumnName="FLM_SYNOPSIS" />
+          <ScalarProperty Name="FLM_DATEPARUTION" ColumnName="FLM_DATEPARUTION" />
+          <ScalarProperty Name="FLM_DUREE" ColumnName="FLM_DUREE" />
+          <ScalarProperty Name="FLM_GENRE" ColumnName="FLM_GENRE" />
+          <ScalarProperty Name="FLM_URLPHOTO" ColumnName="FLM_URLPHOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="T_J_FAVORI_FAV" TypeName="FilmsAvisModels.Entity.T_J_FAVORI_FAV" StoreEntitySet="T_J_FAVORI_FAV">
+      <EndProperty Name="T_E_COMPTE_CPT">
+        <ScalarProperty Name="CPT_ID" ColumnName="CPT_ID" />
+      </EndProperty>
+      <EndProperty Name="T_E_FILM_FLM">
+        <ScalarProperty Name="FLM_ID" ColumnName="FLM_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
