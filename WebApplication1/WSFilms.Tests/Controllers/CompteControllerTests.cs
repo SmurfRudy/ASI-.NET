@@ -41,10 +41,18 @@ namespace WebApplication1.Controllers.Tests
             newCompte.CPT_TELPORTABLE = "0987595029";
             newCompte.CPT_PAYS = "Wazambie";
             newCompte.CPT_VILLE = "Paris";
-            newCompte.CPT_MEL = "testtest@test.com";
+            newCompte.CPT_MEL = "test667@test.com";
 
-            var resultPost = (controller.PostCompte(newCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
-            Assert.AreEqual(resultPost.CPT_CP ,  newCompte.CPT_CP);
+            var resultPost = (controller.PostCompte(newCompte) as CreatedAtRouteNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+            Assert.AreEqual(newCompte.CPT_CP, resultPost.CPT_CP);
+            Assert.AreEqual(newCompte.CPT_NOM, resultPost.CPT_NOM);
+            Assert.AreEqual(newCompte.CPT_PRENOM, resultPost.CPT_PRENOM);
+            Assert.AreEqual(newCompte.CPT_PWD, resultPost.CPT_PWD);
+            Assert.AreEqual(newCompte.CPT_RUE, resultPost.CPT_RUE);
+            Assert.AreEqual(newCompte.CPT_TELPORTABLE, resultPost.CPT_TELPORTABLE);
+            Assert.AreEqual(newCompte.CPT_PAYS, resultPost.CPT_PAYS);
+            Assert.AreEqual(newCompte.CPT_VILLE, resultPost.CPT_VILLE);
+
             controller.DeleteCompte(resultPost.CPT_ID);
             
         }
@@ -63,21 +71,25 @@ namespace WebApplication1.Controllers.Tests
             newCompte.CPT_TELPORTABLE = "0987595029";
             newCompte.CPT_PAYS = "Wazambie";
             newCompte.CPT_VILLE = "Paris";
-            newCompte.CPT_MEL = "testtest@test.com";
-            var resultPost = (controller.PostCompte(newCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+            newCompte.CPT_MEL = "test666@test.com";
+            var resultPost = (controller.PostCompte(newCompte) as CreatedAtRouteNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
 
             T_E_COMPTE_CPT updateCompte = new T_E_COMPTE_CPT();
+            updateCompte.CPT_ID = resultPost.CPT_ID;
             updateCompte.CPT_CP = "66666";
-            updateCompte.CPT_NOM = "test";
-            updateCompte.CPT_PRENOM = "prenom";
-            updateCompte.CPT_PWD = "Password1@";
-            updateCompte.CPT_RUE = "test rue";
-            updateCompte.CPT_TELPORTABLE = "0987595029";
-            updateCompte.CPT_PAYS = "Wazambie";
-            updateCompte.CPT_VILLE = "Paris";
-            updateCompte.CPT_MEL = "testtest@test.com";
+            updateCompte.CPT_NOM = "tes2t";
+            updateCompte.CPT_PRENOM = "prenom2";
+            updateCompte.CPT_PWD = "Password2@";
+            updateCompte.CPT_RUE = "test rue2";
+            updateCompte.CPT_TELPORTABLE = "0987596666";
+            updateCompte.CPT_PAYS = "Namibie";
+            updateCompte.CPT_VILLE = "lyon";
+            updateCompte.CPT_MEL = "test666@test.com";
 
-            var resultPut = (controller.PutCompte(resultPost.CPT_ID,updateCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+            controller.PutCompte(resultPost.CPT_ID, updateCompte);
+            var resultPut = (controller.GetCompte(updateCompte.CPT_MEL) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+
+            //var resultPut = (controller.PutCompte(resultPost.CPT_ID,updateCompte) as CreatedAtRouteNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
 
 
             Assert.AreEqual(updateCompte.CPT_CP, resultPut.CPT_CP);
