@@ -97,7 +97,7 @@ namespace WebApplication1.Controllers
             return CreatedAtRoute("DefaultApi", new { id = t_E_COMPTE_CPT.CPT_ID }, t_E_COMPTE_CPT);
         }
 
-        /*
+        
         // DELETE: api/Compte/5
         [ResponseType(typeof(T_E_COMPTE_CPT))]
         public IHttpActionResult DeleteCompte(int id)
@@ -112,6 +112,18 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
 
             return Ok(t_E_COMPTE_CPT);
+        }
+
+        /*
+        // DELETEall for test
+        public void DeleteAllForTest()
+        {
+            int id = 0;
+            while (db.T_E_COMPTE_CPT.Find(id)!=null)
+            {
+                T_E_COMPTE_CPT t_E_COMPTE_CPT = db.T_E_COMPTE_CPT.Remove(db.T_E_COMPTE_CPT.Find(id));
+                id++;
+            }
         }*/
 
         protected override void Dispose(bool disposing)
