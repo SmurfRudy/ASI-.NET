@@ -15,7 +15,7 @@ namespace WebApplication1.Controllers.Tests
     public class CompteControllerTests
     {
 
-        [TestInitialize()]
+       
 
 
        /* [TestMethod()]
@@ -32,6 +32,27 @@ namespace WebApplication1.Controllers.Tests
         public void PostCompteTest()
         {
             CompteController controller = new CompteController();
+            T_E_COMPTE_CPT newCompte = new T_E_COMPTE_CPT();
+            newCompte.CPT_CP = "66666";
+            newCompte.CPT_NOM = "test";
+            newCompte.CPT_PRENOM = "prenom";
+            newCompte.CPT_PWD = "Password1@";
+            newCompte.CPT_RUE = "test rue";
+            newCompte.CPT_TELPORTABLE = "0987595029";
+            newCompte.CPT_PAYS = "Wazambie";
+            newCompte.CPT_VILLE = "Paris";
+            newCompte.CPT_MEL = "testtest@test.com";
+
+            var resultPost = (controller.PostCompte(newCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+            Assert.AreEqual(resultPost.CPT_CP ,  newCompte.CPT_CP);
+            controller.DeleteCompte(resultPost.CPT_ID);
+            
+        }
+
+        [TestMethod()]
+        public void PutCompteTest()
+        {
+            CompteController controller = new CompteController();
 
             T_E_COMPTE_CPT newCompte = new T_E_COMPTE_CPT();
             newCompte.CPT_CP = "66666";
@@ -44,8 +65,33 @@ namespace WebApplication1.Controllers.Tests
             newCompte.CPT_VILLE = "Paris";
             newCompte.CPT_MEL = "testtest@test.com";
             var resultPost = (controller.PostCompte(newCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
-            Assert.AreEqual(resultPost.CPT_CP ,  newCompte.CPT_CP);
-            
+
+            T_E_COMPTE_CPT updateCompte = new T_E_COMPTE_CPT();
+            updateCompte.CPT_CP = "66666";
+            updateCompte.CPT_NOM = "test";
+            updateCompte.CPT_PRENOM = "prenom";
+            updateCompte.CPT_PWD = "Password1@";
+            updateCompte.CPT_RUE = "test rue";
+            updateCompte.CPT_TELPORTABLE = "0987595029";
+            updateCompte.CPT_PAYS = "Wazambie";
+            updateCompte.CPT_VILLE = "Paris";
+            updateCompte.CPT_MEL = "testtest@test.com";
+
+            var resultPut = (controller.PutCompte(resultPost.CPT_ID,updateCompte) as OkNegotiatedContentResult<T_E_COMPTE_CPT>).Content;
+
+
+            Assert.AreEqual(updateCompte.CPT_CP, resultPut.CPT_CP);
+            Assert.AreEqual(updateCompte.CPT_NOM, resultPut.CPT_NOM);
+            Assert.AreEqual(updateCompte.CPT_PRENOM, resultPut.CPT_PRENOM);
+            Assert.AreEqual(updateCompte.CPT_PWD, resultPut.CPT_PWD);
+            Assert.AreEqual(updateCompte.CPT_RUE, resultPut.CPT_RUE);
+            Assert.AreEqual(updateCompte.CPT_TELPORTABLE, resultPut.CPT_TELPORTABLE);
+            Assert.AreEqual(updateCompte.CPT_PAYS, resultPut.CPT_PAYS);
+            Assert.AreEqual(updateCompte.CPT_VILLE, resultPut.CPT_VILLE);
+
+
+            controller.DeleteCompte(resultPut.CPT_ID);
+
         }
 
         [TestMethod()]

@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     "UAP,Version=v10.0.10586": {
       "CommonServiceLocator/1.3.0": {
@@ -5195,6 +5195,9 @@
       },
       "runtime.win10-arm-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
+        "compile": {
+          "runtimes/win10-arm-aot/lib/netcore50/_._": {}
+        },
         "runtime": {
           "runtimes/win10-arm-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -9877,6 +9880,9 @@
       },
       "runtime.win10-x64-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
+        "compile": {
+          "runtimes/win10-x64-aot/lib/netcore50/_._": {}
+        },
         "runtime": {
           "runtimes/win10-x64-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -14565,6 +14571,9 @@
       },
       "runtime.win10-x86-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
+        "compile": {
+          "runtimes/win10-x86-aot/lib/netcore50/_._": {}
+        },
         "runtime": {
           "runtimes/win10-x86-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -24678,29 +24687,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maxime\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\WebApplication1\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\WebApplication1\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\WebApplication1\\Client\\Client.csproj",
-      "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\WebApplication1\\Client\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\WebApplication1\\Client\\Client.csproj",
+      "outputPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\WebApplication1\\Client\\obj\\",
       "projectStyle": "PackageReference",
-      "skipContentFileWrite": true,
-      "configFilePaths": [
-        "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "uap10.0.10586"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {}

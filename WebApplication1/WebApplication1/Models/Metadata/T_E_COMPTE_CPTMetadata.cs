@@ -31,7 +31,7 @@ namespace WebApplication1.Models.Metadata
             " La longueur  d’un  email  doit  être  comprise  entre  6  et  100 caractères")]
         public string CPT_MEL { get; set; }
 
-        [RegularExpression("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[-+!*$@%_]){6,10}$", ErrorMessage = "Erreur de saisie pour du mot de passe, doit contenir 1 majuscule, 1 chiffre et 1 caractère spécial entre 6 et 10 caractères")]
+        [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z0-9$@$!%*?&]{6,10}", ErrorMessage = "Erreur de saisie pour du mot de passe, doit contenir 1 majuscule, 1 chiffre et 1 caractère spécial entre 6 et 10 caractères")]
         [Display(Name = "password")]
         public string CPT_PWD { get; set; }
 

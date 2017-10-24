@@ -1,1 +1,1 @@
-C:\Users\Maxime\source\repos\ASI-.NET\WebApplication1\Client\Client.csproj;x86
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\WebApplication1\Client\Client.csproj;x86
