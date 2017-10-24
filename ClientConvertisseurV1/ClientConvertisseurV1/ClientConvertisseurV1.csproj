@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F2811489-A365-4DDC-83DF-D07564820F36}</ProjectGuid>
+    <ProjectGuid>{4A2D2F91-D76B-4F97-A370-B91DD9DAD0FF}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClientConvertisseurV1</RootNamespace>

@@ -1,6 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,51 +12,6 @@ namespace ClientConvertisseurV2.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public ICommand BtnSetConversion { get; private set; }
-        Service.ErrorMessage erreur_message = new Service.ErrorMessage();
-        private Model.Devise _comboBoxDeviseItem;
-        public Model.Devise ComboBoxDeviseItem
-        {
-            get { return _comboBoxDeviseItem; }
-            set
-            {
-                _comboBoxDeviseItem = value;
-                RaisePropertyChanged();
-            }
-        }
-        private Service.WSService clientWS;
-        private string _finalAmount;
-        public string FinalAmount
-        {
-            get { return _finalAmount; }
-            set
-            {
-                _finalAmount = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        private string _montantEuros;
-        public string MontantEuros
-        {
-            get { return _montantEuros; }
-            set
-            {
-                _montantEuros = value;
-                RaisePropertyChanged();
-            }
-        }
-        private string _errorMessage;
-        public string ErrorMessage
-        {
-            get { return _errorMessage; }
-            set
-            {
-                _errorMessage = value;
-                RaisePropertyChanged();
-            }
-        }
-        
         private ObservableCollection<Model.Devise> _comboBoxDevises;
         public ObservableCollection<Model.Devise> ComboBoxDevises
         {
@@ -68,57 +22,75 @@ namespace ClientConvertisseurV2.ViewModel
                 RaisePropertyChanged();// Pour notifier de la modification de ses données
             }
         }
-    
+        private string _montantEuros;
+        public string MontantEuros
+        {
+            get { return _montantEuros; }
+            set
+            {
+                _montantEuros = value;
+                RaisePropertyChanged();
+            }
+        }
+        private Model.Devise _comboBoxDeviseItem;
+        public Model.Devise ComboBoxDeviseItem
+        {
+            get { return _comboBoxDeviseItem; }
+            set
+            {
+                _comboBoxDeviseItem = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _montantResultat;
+        public string MontantResultat
+        {
+            get { return _montantResultat; }
+            set
+            {
+                _montantResultat = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public ICommand BtnSetConversion { get; private set; }
+        Service.WSService service = Service.WSService.getInstance();
+        Service.ErrorDialog error = new Service.ErrorDialog();
         public MainViewModel()
         {
-            this.clientWS = new Service.WSService();
             ActionGetData();
-            BtnSetConversion = new RelayCommand(ActionSetConversionAsync);
+            BtnSetConversion = new RelayCommand(ActionSetConversion);
         }
         private async void ActionGetData()
         {
-
-            var result = await clientWS.getAllDevisesAsync();
+            var result = await service.getAllDevisesAsync();
             ComboBoxDevises = new ObservableCollection<Model.Devise>(result);
         }
-
-        private async void ActionSetConversionAsync()
+        private async void ActionSetConversion()
         {
-            try
+            if (MontantEuros == null)
             {
-                if (this.ComboBoxDeviseItem != null)
+                await error.showErrorAsync("Veuillez remplir le montant");
+            }
+            else
+            {
+                if (MontantEuros.Equals(""))
                 {
-                    if ((Double.Parse(this.MontantEuros))>0)
-                    {
-                        try
-                        {
-                            this.FinalAmount = (Double.Parse(this.MontantEuros) * this.ComboBoxDeviseItem.taux).ToString();
-                        }
-                        catch (Exception e)
-                        {
-                            await erreur_message.sendMessageErrorAsync("Erreur dans le calucl final");
-                        }
-                    }
-                    else
-                    {
-                        await erreur_message.sendMessageErrorAsync("Le montant initial n'est pas spécifié en nombre positif");
-                    }
-
+                    await error.showErrorAsync("Veuillez remplir le montant");
                 }
                 else
                 {
-                    await erreur_message.sendMessageErrorAsync("Récupération devise non spécifié");
+                    if (ComboBoxDeviseItem == null)
+                    {
+                        await error.showErrorAsync("Veuillez choisir une devise");
+                    }
+                    else
+                    {
+                        Double result = Double.Parse(MontantEuros) * ComboBoxDeviseItem.taux;
+                        MontantResultat = result.ToString();
+                    }
                 }
             }
-            catch (Exception e)
-            {
-                this.ErrorMessage = ("Erreur Dans la récupération des données");
-                await erreur_message.sendMessageErrorAsync("Erreur");
-            }
-
-
-
         }
-
     }
 }

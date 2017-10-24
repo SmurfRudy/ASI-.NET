@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{0E50018B-3F51-4BE9-98F3-9A5BEE50548A}</ProjectGuid>
+    <ProjectGuid>{EF56F37D-FC86-4E8E-B397-7373D0B0D2DE}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClientConvertisseurV2</RootNamespace>
@@ -95,20 +95,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\ErrorDialog.cs" />
     <Compile Include="Model\Devise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\ErrorMessage.cs" />
-    <Compile Include="Service\WSService.cs" />
+    <Compile Include="ViewModel\InvertedConvertViewModel.cs" />
     <Compile Include="ViewModel\RootViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel_2.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\MainPage_2.xaml.cs">
-      <DependentUpon>MainPage_2.xaml</DependentUpon>
+    <Compile Include="View\InvertedConvertPage.xaml.cs">
+      <DependentUpon>InvertedConvertPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\WSService.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
@@ -120,7 +120,9 @@
     <None Include="ClientConvertisseurV2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Properties\Default.rd.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -134,7 +136,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\MainPage_2.xaml">
+    <Page Include="View\InvertedConvertPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

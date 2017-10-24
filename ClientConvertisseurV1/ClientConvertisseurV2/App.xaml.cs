@@ -69,7 +69,7 @@ namespace ClientConvertisseurV2
                     // paramètre
                     rootFrame.Navigate(typeof(RootPage), e.Arguments);
                 }
-                // Vérifiez que la fenêtre actuelle est active
+                // Vérifiez que la fenêtre actuelle est active 
                 Window.Current.Activate();
             }
         }

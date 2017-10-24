@@ -10,37 +10,38 @@ namespace ClientConvertisseurV2.Service
 {
     class WSService
     {
-        private static HttpClient httpClient;
-        Service.ErrorMessage erreur_message = new Service.ErrorMessage();
-        public WSService()
+        private static HttpClient httpClient = new HttpClient();
+        private static Service.ErrorDialog error = new ErrorDialog();
+        private static WSService instance = new WSService();
+
+        private WSService()
         {
-            if (httpClient == null)
-            {
-                httpClient = new HttpClient();
-                httpClient.BaseAddress = new Uri("http://localhost:1864/api/");
-                httpClient.DefaultRequestHeaders.Accept.Clear();
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            }
+            httpClient.BaseAddress = new Uri("http://localhost:1864/api/");
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
-
-
         public async Task<List<Model.Devise>> getAllDevisesAsync()
         {
             List<Model.Devise> devises = new List<Model.Devise>();
-            try {
-                HttpResponseMessage response = await httpClient.GetAsync("Devise");
-                if (response.IsSuccessStatusCode)
-                {
-                    devises = await response.Content.ReadAsAsync<List<Model.Devise>>();
-                }
+            HttpResponseMessage response = null;
+            try
+            {
+                response = await httpClient.GetAsync("devise");
             }
             catch (Exception e)
             {
-                await erreur_message.sendMessageErrorAsync("récupération devise");
+                await error.showErrorAsync("WS non disponible");
             }
-
-            
+            if (response.IsSuccessStatusCode)
+            {
+                devises = await response.Content.ReadAsAsync<List<Model.Devise>>();
+            }
             return devises;
+        }
+
+        public static WSService getInstance()
+        {
+            return instance;
         }
     }
 }

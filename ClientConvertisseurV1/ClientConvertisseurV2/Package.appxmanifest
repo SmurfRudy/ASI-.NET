@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="6c15dec0-87aa-4593-a948-9f8ebdb182a4"
-    Publisher="CN=Admin"
+    Name="f5d46335-3b8c-4fa5-8d3c-7c623d9b0293"
+    Publisher="CN=Maxime"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="6c15dec0-87aa-4593-a948-9f8ebdb182a4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="f5d46335-3b8c-4fa5-8d3c-7c623d9b0293" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ClientConvertisseurV2</DisplayName>
-    <PublisherDisplayName>Admin</PublisherDisplayName>
+    <PublisherDisplayName>Maxime</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

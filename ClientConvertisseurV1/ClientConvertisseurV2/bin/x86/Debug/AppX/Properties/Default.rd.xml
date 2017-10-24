@@ -12,7 +12,7 @@
     <TypeInstantiation Name="App1.AppClass" Arguments="System.Int32" Activate="Required Public" />
 
     Utilisation de la directive Namespace pour appliquer la stratégie de réflexion à tous les types d'un espace de noms particulier
-    <Namespace Name="DataClasses.ViewModels" Seralize="All" />
+    <Namespace Name="DataClasses.ViewModels" Serialize="All" />
 -->
 
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

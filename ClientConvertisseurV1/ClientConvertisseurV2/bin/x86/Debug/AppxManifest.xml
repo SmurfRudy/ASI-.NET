@@ -7,11 +7,11 @@
 
     Pour plus d'informations sur les fichiers manifeste, consultez http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="6c15dec0-87aa-4593-a948-9f8ebdb182a4" Publisher="CN=Admin" Version="1.0.0.0" ProcessorArchitecture="x86" />
-  <mp:PhoneIdentity PhoneProductId="6c15dec0-87aa-4593-a948-9f8ebdb182a4" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="f5d46335-3b8c-4fa5-8d3c-7c623d9b0293" Publisher="CN=Admin" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <mp:PhoneIdentity PhoneProductId="f5d46335-3b8c-4fa5-8d3c-7c623d9b0293" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ClientConvertisseurV2</DisplayName>
-    <PublisherDisplayName>Admin</PublisherDisplayName>
+    <PublisherDisplayName>Maxime</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -36,11 +36,11 @@
     <build:Item Name="VisualStudio" Version="15.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2017" />
     <build:Item Name="OperatingSystem" Version="10.0.15063.0 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26419.1" />
-    <build:Item Name="ProjectGUID" Value="{0E50018B-3F51-4BE9-98F3-9A5BEE50548A}" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26906.1" />
+    <build:Item Name="ProjectGUID" Value="{EF56F37D-FC86-4E8E-B397-7373D0B0D2DE}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26419.1" />
-    <build:Item Name="MakePri.exe" Version="10.0.15063.137 (WinBuild.160101.0800)" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26906.1" />
+    <build:Item Name="MakePri.exe" Version="10.0.15063.468 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     "UAP,Version=v10.0.10586": {
       "CommonServiceLocator/1.3.0": {
@@ -5351,9 +5351,6 @@
       },
       "runtime.win10-arm-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-arm-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-arm-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -10140,9 +10137,6 @@
       },
       "runtime.win10-x64-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x64-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x64-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -14935,9 +14929,6 @@
       },
       "runtime.win10-x86-aot.runtime.native.System.IO.Compression/4.0.1": {
         "type": "package",
-        "compile": {
-          "runtimes/win10-x86-aot/lib/netcore50/_._": {}
-        },
         "runtime": {
           "runtimes/win10-x86-aot/lib/netcore50/clrcompression.dll": {}
         }
@@ -25273,37 +25264,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Maxime\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV2\\ClientConvertisseurV2.csproj",
+      "projectUniqueName": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\ClientConvertisseurV1\\ClientConvertisseurV2\\ClientConvertisseurV2.csproj",
       "projectName": "ClientConvertisseurV2",
-      "projectPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV2\\ClientConvertisseurV2.csproj",
-      "outputPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2017\\Projects\\ClientConvertisseurV1\\ClientConvertisseurV2\\obj\\",
+      "projectPath": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\ClientConvertisseurV1\\ClientConvertisseurV2\\ClientConvertisseurV2.csproj",
+      "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maxime\\source\\repos\\ASI-.NET\\ClientConvertisseurV1\\ClientConvertisseurV2\\obj\\",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "uap10.0.10586"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {}
         }
-      }
-    },
-    "dependencies": {
-      "Microsoft.AspNet.WebApi.Client": {
-        "target": "Package",
-        "version": "5.2.3"
-      },
-      "Microsoft.NETCore.UniversalWindowsPlatform": {
-        "target": "Package",
-        "version": "5.4.0"
-      },
-      "MvvmLight": {
-        "target": "Package",
-        "version": "5.3.0"
       }
     },
     "frameworks": {

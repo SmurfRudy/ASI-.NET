@@ -22,28 +22,11 @@ namespace ClientConvertisseurV2.View
     /// </summary>
     public sealed partial class RootPage : Page
     {
-      
         public RootPage(Frame frame)
         {
             this.InitializeComponent();
             this.MySplitView.Content = frame;
             (MySplitView.Content as Frame).Navigate(typeof(MainPage));
-        }
-
-      
-        private void MenuButton1_Click(object sender, RoutedEventArgs e)
-        {
-            (MySplitView.Content as Frame).Navigate(typeof(MainPage));
-        }
-
-        private void MenuButton2_Click(object sender, RoutedEventArgs e)
-        {
-            (MySplitView.Content as Frame).Navigate(typeof(MainPage_2));
-        }
-
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
     }
 }

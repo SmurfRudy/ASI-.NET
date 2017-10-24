@@ -22,16 +22,9 @@ namespace ClientConvertisseurV2.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Service.WSService monService;
         public MainPage()
         {
-            monService = new Service.WSService();
-  
             this.InitializeComponent();
-           
         }
-
-
-       
     }
 }

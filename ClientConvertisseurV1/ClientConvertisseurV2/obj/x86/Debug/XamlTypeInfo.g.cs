@@ -139,8 +139,8 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
             _typeNameTable[3] = "GalaSoft.MvvmLight.ViewModelBase";
             _typeNameTable[4] = "GalaSoft.MvvmLight.ObservableObject";
             _typeNameTable[5] = "ClientConvertisseurV2.ViewModel.MainViewModel";
-            _typeNameTable[6] = "ClientConvertisseurV2.ViewModel.MainViewModel_2";
-            _typeNameTable[7] = "ClientConvertisseurV2.View.MainPage_2";
+            _typeNameTable[6] = "ClientConvertisseurV2.ViewModel.InvertedConvertViewModel";
+            _typeNameTable[7] = "ClientConvertisseurV2.View.InvertedConvertPage";
             _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[10] = "ClientConvertisseurV2.View.MainPage";
@@ -153,8 +153,8 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
             _typeTable[3] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
             _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
             _typeTable[5] = typeof(global::ClientConvertisseurV2.ViewModel.MainViewModel);
-            _typeTable[6] = typeof(global::ClientConvertisseurV2.ViewModel.MainViewModel_2);
-            _typeTable[7] = typeof(global::ClientConvertisseurV2.View.MainPage_2);
+            _typeTable[6] = typeof(global::ClientConvertisseurV2.ViewModel.InvertedConvertViewModel);
+            _typeTable[7] = typeof(global::ClientConvertisseurV2.View.InvertedConvertPage);
             _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[10] = typeof(global::ClientConvertisseurV2.View.MainPage);
@@ -197,8 +197,8 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
         private object Activate_2_RootViewModel() { return new global::ClientConvertisseurV2.ViewModel.RootViewModel(); }
         private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
         private object Activate_5_MainViewModel() { return new global::ClientConvertisseurV2.ViewModel.MainViewModel(); }
-        private object Activate_6_MainViewModel_2() { return new global::ClientConvertisseurV2.ViewModel.MainViewModel_2(); }
-        private object Activate_7_MainPage_2() { return new global::ClientConvertisseurV2.View.MainPage_2(); }
+        private object Activate_6_InvertedConvertViewModel() { return new global::ClientConvertisseurV2.ViewModel.InvertedConvertViewModel(); }
+        private object Activate_7_InvertedConvertPage() { return new global::ClientConvertisseurV2.View.InvertedConvertPage(); }
         private object Activate_10_MainPage() { return new global::ClientConvertisseurV2.View.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
@@ -216,7 +216,7 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("Root");
                 userType.AddMemberName("Main");
-                userType.AddMemberName("Main2");
+                userType.AddMemberName("InvertedConvert");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -250,16 +250,16 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  ClientConvertisseurV2.ViewModel.MainViewModel_2
+            case 6:   //  ClientConvertisseurV2.ViewModel.InvertedConvertViewModel
                 userType = new global::ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  ClientConvertisseurV2.View.MainPage_2
+            case 7:   //  ClientConvertisseurV2.View.InvertedConvertPage
                 userType = new global::ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_MainPage_2;
+                userType.Activator = Activate_7_InvertedConvertPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -299,10 +299,10 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
             var that = (global::ClientConvertisseurV2.ViewModel.ViewModelLocator)instance;
             return that.Main;
         }
-        private object get_2_ViewModelLocator_Main2(object instance)
+        private object get_2_ViewModelLocator_InvertedConvert(object instance)
         {
             var that = (global::ClientConvertisseurV2.ViewModel.ViewModelLocator)instance;
-            return that.Main2;
+            return that.InvertedConvert;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -324,10 +324,10 @@ namespace ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo
                 xamlMember.Getter = get_1_ViewModelLocator_Main;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "ClientConvertisseurV2.ViewModel.ViewModelLocator.Main2":
+            case "ClientConvertisseurV2.ViewModel.ViewModelLocator.InvertedConvert":
                 userType = (global::ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ClientConvertisseurV2.ViewModel.ViewModelLocator");
-                xamlMember = new global::ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo.XamlMember(this, "Main2", "ClientConvertisseurV2.ViewModel.MainViewModel_2");
-                xamlMember.Getter = get_2_ViewModelLocator_Main2;
+                xamlMember = new global::ClientConvertisseurV2.ClientConvertisseurV2_XamlTypeInfo.XamlMember(this, "InvertedConvert", "ClientConvertisseurV2.ViewModel.InvertedConvertViewModel");
+                xamlMember.Getter = get_2_ViewModelLocator_InvertedConvert;
                 xamlMember.SetIsReadOnly();
                 break;
             }

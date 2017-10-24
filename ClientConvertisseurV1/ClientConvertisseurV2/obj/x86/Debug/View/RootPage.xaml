@@ -5,48 +5,26 @@
     xmlns:local="using:ClientConvertisseurV2.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    DataContext="{Binding Root, Source={StaticResource Locator}}">
 
-    <SplitView x:ConnectionId='1' x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
-
-               CompactPaneLength="50" OpenPaneLength="300">
-
+    <SplitView x:ConnectionId='1' x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="180">
         <SplitView.Pane>
-
             <StackPanel Background="Gray">
-
                 <Button x:ConnectionId='2' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-
-                    Width="50" Height="50" Background="Transparent"                              />
-
+                    Width="50" Height="50" Background="Transparent" Command="{Binding BtnHamburger}"/>
                 <StackPanel Orientation="Horizontal">
-
-                    <Button x:ConnectionId='4' x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="$"
-
-                    Width="50" Height="50" Background="Transparent"  Command="{Binding BtnConverter}"/>
-
-                    <TextBlock Text="Euro -> Devise" FontSize="18" VerticalAlignment="Center" />
-
+                    <Button x:ConnectionId='4' x:Name="BtnConverter" Content="&#8364;"
+                    Width="50" Height="50" Background="Transparent" Command="{Binding BtnConverter}"/>
+                    <TextBlock Text="Euro => Devise" FontSize="18" VerticalAlignment="Center"></TextBlock>
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal">
-
-                    <Button x:ConnectionId='3' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="€" 
-
-                        Width="50" Height="50" Background="Transparent" Command="{Binding BtnInverterConverter}"/>
-
-                    <TextBlock Text="Devise -> Euro" FontSize="18" VerticalAlignment="Center" />
-
+                    <Button x:ConnectionId='3' x:Name="BtnInvertedConverter" Content="&#36;"
+                    Width="50" Height="50" Background="Transparent" Command="{Binding BtnInvertedConverter}"/>
+                    <TextBlock Text="Devise => Euro" FontSize="18" VerticalAlignment="Center"></TextBlock>
                 </StackPanel>
-
-            
-
             </StackPanel>
-
         </SplitView.Pane>
-
-
-
     </SplitView>
 </Page>
 
